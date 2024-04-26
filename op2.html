@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animación de Menú HTML</title>
+<style>
+  body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #009999;
+  }
+
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .navbar a.active {
+    background-color: #666;
+    color: white;
+  }
+
+  .content {
+    padding: 10px;
+    margin-top: 10px;
+    height: 10px; /* Solo para propósitos de demostración */
+  }
+
+  /* Anima el menú cuando se desplaza hacia arriba */
+  .navbar.slide-up {
+    top: -60px;
+  }
+
+  /* Anima el menú cuando se desplaza hacia abajo */
+  .navbar.slide-down {
+    top: 0;
+  }
+body,td,th {
+	color: #FFFFFF;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar" id="navbar">
+ <a href="op1.html" class="active">Principal</a>
+  <a href="op2.html">Ubicacion</a>
+  <a href="op3.html">transporte</a>
+  <a href="op4.html">Comercio</a>
+  <a href="op5.html">Precaucion</a>
+  <a href="op6.html">Galeria De Fotos</a>
+  <a href="op7.html">Recomendaciones</a>
+  <a href="op8.html">Comentario</a>
+</div>
+
+<div class="content">
+  <!-- Contenido de la página aquí -->
+</div>
+
+<p>
+  <script>
+// Oculta o muestra el menú dependiendo de la dirección del desplazamiento
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").classList.remove("slide-up");
+    document.getElementById("navbar").classList.add("slide-down");
+  } else {
+    document.getElementById("navbar").classList.remove("slide-down");
+    document.getElementById("navbar").classList.add("slide-up");
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<body>
+<center><h1><strong>Ubicación</strong></h1>
+</center>
+
+<center>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3814.945462406015!2d-91.413562!3d17.026344999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85f36ee7edd46b9d%3A0x7cd1ed140244178!2sR%C3%ADo%20Santo%20Domingo!5e0!3m2!1ses!2smx!4v1710693679957!5m2!1ses!2smx" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</center>
+</body>
+</html>

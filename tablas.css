@@ -1,0 +1,65 @@
+
+table{
+    margin-top: 50px;
+    caption-side: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    text-align: center;
+    
+}
+
+h1{
+  font-family: 'Georgia',  sans-serif;
+}
+
+h3{
+ text-align: center;
+ 
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+
+
+caption{
+   padding-top: 10px;
+   font-style: italic;
+   font-family: 'Georgia',  sans-serif;
+   
+}
+
+th{
+  background-color: black;
+  color: white;
+}
+
+td, th{
+  border: 2px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Georgia',  sans-serif;
+}
+label{
+  text-align: center;
+ 
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-family: 'Georgia',  sans-serif;
+}
+
+img{
+  height: 350px;
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  
+  padding-top: 30px;
+  
+  
+}

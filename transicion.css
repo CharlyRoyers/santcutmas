@@ -1,0 +1,60 @@
+:root{
+    --clippy:  polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'poppins' sans-serif;
+    background: ;
+    height: 100vh;
+    display: flex;
+}
+
+.texts{
+    margin: auto;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.name{
+    font-size: 3rem;
+    margin-bottom: .5em;
+
+}
+.paragraph{
+    font-size: 2rem;
+    font-weight: 300;
+
+}
+
+
+.item{
+    position: relative;
+    padding-left: 1rem;
+    
+}
+.item::before{
+    content: "";
+    display: block;
+    background: blue;
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: var(--clippy);
+    transition: clip-path 2s;
+}
+.paragraph::before{
+    background: red;
+
+}
+.item:hover::before{
+    
+    --clippy:  polygon(0 0, 99% 0, 99% 100%, 0% 100%);
+
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animación de Menú HTML</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #009999;
+    color: #FFFFFF;
+  }
+
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .navbar a.active {
+    background-color: #666;
+    color: white;
+  }
+
+  .content {
+    padding: 10px;
+    margin-top: 10px;
+    height: 10px; /* Solo para propósitos de demostración */
+  }
+
+  /* Anima el menú cuando se desplaza hacia arriba */
+  .navbar.slide-up {
+    top: -60px;
+  }
+
+  /* Anima el menú cuando se desplaza hacia abajo */
+  .navbar.slide-down {
+    top: 0;
+  }
+
+  /* Animación para las imágenes */
+  @keyframes imageZoom {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  /* Aplicar la animación a las imágenes */
+  .image-animation {
+    animation: imageZoom 1s infinite;
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar" id="navbar">
+  <a href="op1.html" class="active">Principal</a>
+  <a href="op2.html">Ubicacion</a>
+  <a href="op3.html">transporte</a>
+  <a href="op4.html">Comercio</a>
+  <a href="op5.html">Precaucion</a>
+  <a href="op6.html">Galeria De Fotos</a>
+  <a href="op7.html">Recomendaciones</a>
+  <a href="op8.html">Comentario</a>
+</div>
+
+<div class="content">
+  <!-- Contenido de la página aquí -->
+</div>
+
+<p>
+
+<div align="center"><strong><span class="style1">COMERCIO</span></strong></div>
+<p align="justify" class="style2"><h2>existente dentro de un &aacute;rea que hay distintos locales por  ejemplo tiendas, farmacia, tortiller&iacute;a, bienestar etc. Hay bastantes cosas que puedes  conseguir o comprar cercar de cascadas y tiene su parque y caba&ntilde;as para rentar  las personas son muy amables.</h2></p>
+<table width="1083" height="544" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      <div align="center">
+        <img src="far.jpg" width="250" height="230" class="image-animation" />
+      </div>
+    </td>
+    <td>&nbsp;</td>
+    <td>
+      <div align="center">
+        <img src="tie.png" width="250" height="230" class="image-animation" />
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+      <div align="center">
+        <img src="tor.jpg" width="250" height="230" class="image-animation" />
+      </div>
+    </td>
+    <td>&nbsp;</td>
+    <td>
+      <div align="center">
+        <img src="ima14.jpeg" width="250" height="230" class="image-animation" />
+      </div>
+    </td>
+  </tr>
+</table>
+<p align="justify" class="style2">&nbsp; </p>
+
+<script>
+  // Oculta o muestra el menú dependiendo de la dirección del desplazamiento
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").classList.remove("slide-up");
+      document.getElementById("navbar").classList.add("slide-down");
+    } else {
+      document.getElementById("navbar").classList.remove("slide-down");
+      document.getElementById("navbar").classList.add("slide-up");
+    }
+    prevScrollpos = currentScrollPos;
+  }
+</script>
+
+</body>
+</html>

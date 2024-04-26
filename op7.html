@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animación de Menú HTML</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .navbar a.active {
+    background-color: #666;
+    color: white;
+  }
+
+  .content {
+    padding: 10px;
+    margin-top: 10px;
+    height: 10px; /* Solo para propósitos de demostración */
+  }
+
+  /* Anima el menú cuando se desplaza hacia arriba */
+  .navbar.slide-up {
+    top: -60px;
+  }
+
+  /* Anima el menú cuando se desplaza hacia abajo */
+  .navbar.slide-down {
+    top: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar" id="navbar">
+ <a href="op1.html" class="active">Principal</a>
+  <a href="op2.html">Ubicacion</a>
+  <a href="op3.html">transporte</a>
+  <a href="op4.html">Comercio</a>
+  <a href="op5.html">Precaucion</a>
+  <a href="op6.html">Galeria De Fotos</a>
+  <a href="op7.html">Recomendaciones</a>
+  <a href="op8.html">Comentario</a>
+</div>
+
+<div class="content">
+  <!-- Contenido de la página aquí -->
+</div>
+
+<p>
+  <script>
+// Oculta o muestra el menú dependiendo de la dirección del desplazamiento
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").classList.remove("slide-up");
+    document.getElementById("navbar").classList.add("slide-down");
+  } else {
+    document.getElementById("navbar").classList.remove("slide-down");
+    document.getElementById("navbar").classList.add("slide-up");
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
+
+
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animación de Título con Información</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: 
+    align-items: center;
+    background-color: #3393FF; /* Color de fondo */
+    font-family: Arial, sans-serif;
+  }
+
+  .titulo {
+    font-size: 4em;
+    animation: fadeIn 2s ease-in-out;
+    color: white;
+  }
+
+  .informacion {
+    font-size: 1.2em;
+    text-align: justify;
+    max-width: 80%; /* Ancho máximo del párrafo */
+    margin-top: 20px; /* Espacio superior para separar del título */
+    animation: fadeIn 2s ease-in-out;
+    color: white;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animación de Título con Información</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3393FF; /* Color de fondo */
+    font-family: Arial, sans-serif;
+  }
+
+  .titulo {
+    font-size: 4em;
+    animation: fadeIn 2s ease-in-out;
+    color: white;
+  }
+
+  .informacion {
+    font-size: 1.2em;
+    text-align: justify;
+    max-width: 80%; /* Ancho máximo del párrafo */
+    margin-top: 20px; /* Espacio superior para separar del título */
+    animation: fadeIn 2s ease-in-out;
+    color: white;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="titulo">Recomendaciones</div>
+
+<div class="informacion">
+  <ol>
+   <h2> <li>Llevar una bolsa de basura y recoger la basura que generes.</li>
+    <li>Llevar alimentos y bebidas antes de llegar a las cascadas.</li>
+    <li>Evitar arrojar basura en las cascadas.</li>
+    <li>Verificar el clima antes de salir: asegúrate de que sea adecuado para actividades al aire libre y que no haya riesgo de tormentas o condiciones peligrosas.</li>
+    <li>Preparar el equipo adecuado: lleva ropa cómoda y adecuada para mojarte si planeas nadar. También considera llevar protector solar, repelente de insectos y un cambio de ropa.</li>
+    <li>Investigar las condiciones del agua: si planeas nadar, verifica la profundidad y la corriente del agua para asegurarte de que sea seguro.</li>
+    <li>Conocer las normas y regulaciones locales: infórmate sobre las normas de seguridad, conservación y comportamiento en áreas naturales.</li>
+  </ol>
+</div>
+
+</body>
+</html>
+
